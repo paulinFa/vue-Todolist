@@ -16,7 +16,9 @@ import 'bootstrap/dist/js/bootstrap.min.js'</script>
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+  padding-top: 60px;
+  height: 74vw;
+  background-color: #211770;
 }
 </style>

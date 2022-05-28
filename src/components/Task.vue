@@ -1,7 +1,7 @@
 <template>
   <template v-if="typeTask === 1">
     <p class="task task-progress">{{ nameTask }} : </p>
-    <button class="btn btn-success" @click="successTask(idTask)">V</button>
+    <button class="btn btn-success button" @click="successTask(idTask)">V</button>
   </template>
   <template v-else-if="typeTask === 2">
     <p class="task task-finished">{{ nameTask }} : </p>

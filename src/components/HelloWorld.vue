@@ -50,23 +50,23 @@ const doTaskSuccess = (id: number): void => {
   <div v-for="task in tasks">
     <template v-if="task.type === 1 && (typeSort ==='-1' || typeSort ==='1')">
       <p class="task task-progress">{{ task.name }} : </p>
-      <button class="btn btn-success" @click="doTaskSuccess(task.id)">V</button>
-      <button class="btn btn-danger" @click="deleteTask(task.id)">X</button>
+      <button class="btn btn-success button" @click="doTaskSuccess(task.id)">V</button>
+      <button class="btn btn-danger button" @click="deleteTask(task.id)">X</button>
     </template>
     <template v-if="task.type === 2 && (typeSort ==='-1' || typeSort ==='2')">
       <p class="task task-finished">{{ task.name }} : </p>
-      <button class="btn btn-danger" @click="deleteTask(task.id)">X</button>
+      <button class="btn btn-danger button" @click="deleteTask(task.id)">X</button>
     </template>
     <template v-if="task.type === 0 && (typeSort ==='-1' || typeSort ==='0')">
       <p class="task task-stopped">{{ task.name }} : </p>
-      <button class="btn btn-danger" @click="deleteTask(task.id)">X</button>
+      <button class="btn btn-danger button" @click="deleteTask(task.id)">X</button>
     </template>
   </div>
   <input id="task" name="task" type="text">
-  <button class="btn btn-primary" type="button" @click="addTask()">Add</button>
-  <button class="btn btn-primary" type="button">count is: {{ count }}</button>
+  <button class="btn btn-primary button" type="button" @click="addTask()">Add</button>
+  <button class="btn btn-primary button" type="button">count is: {{ count }}</button>
 
-  <select id="sort-task" name="sort" @change="typeSort = $event.target.value">
+  <select id="sort-task" class="form-select" name="sort" @change="typeSort = $event.target.value">
     <option selected value="-1">All type</option>
     <option value="1">In progress</option>
     <option value="2">Finish</option>
@@ -100,9 +100,12 @@ const doTaskSuccess = (id: number): void => {
   color: red;
 }
 
+.button {
+  margin: 5px;
+}
 
 button {
-  display: inline
+  display: inline;
 }
 
 a {
